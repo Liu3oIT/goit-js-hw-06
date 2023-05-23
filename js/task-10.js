@@ -25,11 +25,8 @@ const createBoxes = (amount) => {
   Array.from({ length: amount }).forEach((_, index) => {
     const size = 30 + index * 10;
     const randomColor = getRandomHexColor();
-
     const div = document.createElement("div");
-    div.style.width = `${size}px`;
-    div.style.height = `${size}px`;
-    div.style.backgroundColor = randomColor;
+    div.style.cssText = `width: ${size}px; height: ${size}px; background-color: ${randomColor};`;
 
     boxes.push(div);
   });

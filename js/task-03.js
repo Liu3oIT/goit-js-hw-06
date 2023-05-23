@@ -16,12 +16,10 @@ const galleryList = document.querySelector('.gallery');
 
 
 const imagesEl = document.createElement('img'); 
-const markap = ({url, alt}) => `<li><img src = "${url}" alt = "${alt}"></li>`;
+const markap = ({url, alt}) => `<li class="decoration"><img src = "${url}" alt = "${alt}"></li>`;
 const galaryAll = images.map((el) => markap(el));
 
 
 galleryList.insertAdjacentHTML("afterbegin", galaryAll.join(''));
-const addedClassGalary = document.querySelectorAll('li');
 
-addedClassGalary.forEach((el) => el.classList.add("decoration"));
 galleryList.style.cssText = `display: flex; gap: 40px; flex-direction: column; align-items: center;`;

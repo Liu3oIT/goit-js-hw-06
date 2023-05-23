@@ -1,5 +1,5 @@
 const form = document.querySelector(".login-form");
-const  arrayDataUserInfo = [];
+
 
 const handleSubmit = (event) => {
     event.preventDefault();
@@ -13,8 +13,7 @@ const handleSubmit = (event) => {
         email: email.value,
         password: password.value,
     };
-    arrayDataUserInfo.push(formInfo);
-    console.log(arrayDataUserInfo);
+    console.log(formInfo);
     event.currentTarget.reset();
 }
 form.addEventListener("submit", handleSubmit);
